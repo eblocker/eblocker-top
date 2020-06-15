@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.eblocker</groupId>
     <artifactId>eblocker-top</artifactId>
-    <version>2.3.9</version>
+    <version>2.3.10</version>
     <packaging>pom</packaging>
     <name>eBlocker - Common Project Definitions</name>
 
@@ -35,6 +35,8 @@
         <version.jedis>2.9.0</version.jedis>
         <version.guice>4.0</version.guice>
         <version.guava>20.0</version.guava>
+        <version.jaxb>2.3.3</version.jaxb>
+        <version.jaxws>2.3.3</version.jaxws>
         <version.jackson>2.10.2</version.jackson>
         <version.brotli>0.1.2</version.brotli>
 
@@ -54,7 +56,7 @@
         <version.httpclient>4.5.3</version.httpclient>
 
         <version.junit>4.12</version.junit>
-        <version.mockito>2.7.12</version.mockito>
+        <version.mockito>3.3.3</version.mockito>
         <version.embedded-redis>0.6</version.embedded-redis>
         <version.subethasmtp>3.1.7</version.subethasmtp>
         <version.hikaricp>2.4.5</version.hikaricp>
@@ -124,6 +126,11 @@
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
                 <version>${version.guava}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sun.xml.bind</groupId>
+                <artifactId>jaxb-impl</artifactId>
+                <version>${version.jaxb}</version>
             </dependency>
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
@@ -428,6 +435,14 @@
                 <groupId>org.sonarsource.scanner.maven</groupId>
                 <artifactId>sonar-maven-plugin</artifactId>
                 <version>3.4.0.905</version>
+                <!-- fixme: not scope test? -->
+            </dependency>
+            <dependency>
+	        <groupId>com.sun.xml.ws</groupId>
+		<artifactId>jaxws-ri</artifactId>
+                <version>${version.jaxws}</version>
+                <scope>test</scope>
+                <type>pom</type>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -490,7 +505,7 @@
                 <plugin>
                     <groupId>org.jacoco</groupId>
                     <artifactId>jacoco-maven-plugin</artifactId>
-                    <version>0.7.7.201606060606</version>
+                    <version>0.8.5</version>
                 </plugin>
 
 
