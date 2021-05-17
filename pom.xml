@@ -3,22 +3,22 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.eblocker</groupId>
     <artifactId>eblocker-top</artifactId>
-    <version>2.4.1</version>
+    <version>2.4.2</version>
     <packaging>pom</packaging>
     <name>eBlocker - Common Project Definitions</name>
 
     <repositories>
         <repository>
-            <id>4thline.org</id>
-            <name>4th Line</name>
-            <url>http://4thline.org/m2/</url>
+            <id>maven.eblocker.org</id>
+            <name>eBlocker</name>
+            <url>https://maven.eblocker.org/m2/</url>
         </repository>
         <repository>
             <id>sonatype-snapshots-repo</id>
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
             <releases><enabled>false</enabled></releases>
             <snapshots><enabled>true</enabled></snapshots>
-         </repository>
+        </repository>
     </repositories>
 
     <properties>
@@ -35,7 +35,7 @@
         <version.syntaxe>0.4.9</version.syntaxe>
         <version.jedis>2.9.0</version.jedis>
         <version.guice>4.0</version.guice>
-        <version.guava>29.0-jre</version.guava>
+        <version.guava>30.0-jre</version.guava>
         <version.jaxb>2.3.3</version.jaxb>
         <version.jaxws>2.3.3</version.jaxws>
         <version.jackson>2.12.1</version.jackson>
@@ -75,8 +75,8 @@
         <version.dropwizard.metrics>3.1.2</version.dropwizard.metrics>
         <version.javax.inject>1</version.javax.inject>
         <version.jmdns>3.5.1</version.jmdns>
-        <version.cling-core>2.1.1</version.cling-core>
-        <version.cling-support>2.1.1</version.cling-support>
+        <version.cling-core>2.1.2</version.cling-core>
+        <version.cling-support>2.1.2</version.cling-support>
         <version.jul-to-slf4j>1.7.25</version.jul-to-slf4j>
         <version.mapdb>1.0.9</version.mapdb>
     </properties>
