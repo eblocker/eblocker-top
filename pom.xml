@@ -54,7 +54,7 @@
         <version.bouncycastle>1.52</version.bouncycastle>
         <version.jersey>2.26</version.jersey>
         <version.java-jwt>2.2.0</version.java-jwt>
-        <version.httpclient>4.5.3</version.httpclient>
+        <version.httpclient>4.5.13</version.httpclient>
 
         <version.junit>4.13.1</version.junit>
         <version.mockito>3.3.3</version.mockito>
