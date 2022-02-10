@@ -62,7 +62,7 @@
         <version.embedded-redis>0.6</version.embedded-redis>
         <version.subethasmtp>3.1.7</version.subethasmtp>
         <version.hikaricp>2.4.5</version.hikaricp>
-        <version.postgresql>9.3-1102-jdbc41</version.postgresql>
+        <version.postgresql>42.2.25</version.postgresql>
         <version.liquibase-hibernate4>3.5</version.liquibase-hibernate4>
         <version.liquibase-slf4j>1.2.1</version.liquibase-slf4j>
         <version.liquibase>3.3.2</version.liquibase>
