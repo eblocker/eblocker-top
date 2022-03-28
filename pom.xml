@@ -65,7 +65,7 @@
         <version.postgresql>42.3.3</version.postgresql>
         <version.liquibase-hibernate4>3.5</version.liquibase-hibernate4>
         <version.liquibase-slf4j>1.2.1</version.liquibase-slf4j>
-        <version.liquibase>3.3.2</version.liquibase>
+        <version.liquibase>4.8.0</version.liquibase>
 
         <version.jbrowserdriver>[0.14.0, 2.0)</version.jbrowserdriver>
         <version.lukehutch>1.9.18</version.lukehutch>
