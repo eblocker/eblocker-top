@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.eblocker</groupId>
     <artifactId>eblocker-top</artifactId>
-    <version>2.4.9</version>
+    <version>2.4.10</version>
     <packaging>pom</packaging>
     <name>eBlocker - Common Project Definitions</name>
 
@@ -29,9 +29,9 @@
         <java.version>11</java.version>
         <java.release>11</java.release>
 
-        <version.netty>4.1.79.Final</version.netty>
-        <version.netty.icap>2.1.3</version.netty.icap>
-        <version.restexpress>0.12.0-SNAPSHOT</version.restexpress>
+        <version.netty>4.1.84.Final</version.netty>
+        <version.netty.icap>2.1.4</version.netty.icap>
+        <version.restexpress>0.12.1</version.restexpress>
         <version.syntaxe>0.4.9</version.syntaxe>
         <version.jedis>2.9.0</version.jedis>
         <version.guice>5.0.1</version.guice>
@@ -70,7 +70,7 @@
         <version.jbrowserdriver>[0.14.0, 2.0)</version.jbrowserdriver>
         <version.lukehutch>1.9.18</version.lukehutch>
         <version.embedded-redis>0.6</version.embedded-redis>
-        <version.mockserver>5.11.2</version.mockserver>
+        <version.mockserver>5.14.0</version.mockserver>
 
         <version.joda-time-hibernate>1.3</version.joda-time-hibernate>
         <version.dropwizard.metrics>3.1.2</version.dropwizard.metrics>
@@ -95,7 +95,7 @@
                 <version>${version.netty.icap}</version>
             </dependency>
             <dependency>
-                <groupId>com.strategicgains</groupId>
+                <groupId>org.eblocker</groupId>
                 <artifactId>RestExpress</artifactId>
                 <version>${version.restexpress}</version>
             </dependency>
