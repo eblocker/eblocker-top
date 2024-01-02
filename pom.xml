@@ -24,6 +24,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
+        <debTargetDir>${project.build.directory}</debTargetDir>
 
         <!-- Do not rename to 'version.java': Spring Boot needs exactly this name! -->
         <java.version>11</java.version>
@@ -31,14 +32,14 @@
 
         <version.netty>4.1.84.Final</version.netty>
         <version.netty.icap>2.1.4</version.netty.icap>
-        <version.restexpress>0.12.1</version.restexpress>
+        <version.restexpress>0.12.2</version.restexpress>
         <version.syntaxe>0.4.9</version.syntaxe>
         <version.jedis>2.9.0</version.jedis>
         <version.guice>5.0.1</version.guice>
         <version.guava>30.0-jre</version.guava>
         <version.jaxb>2.3.3</version.jaxb>
         <version.jaxws>2.3.3</version.jaxws>
-        <version.jackson>2.12.7</version.jackson>
+        <version.jackson>2.16.1</version.jackson>
         <version.brotli>0.1.2</version.brotli>
 
         <version.spring-boot>1.5.3.RELEASE</version.spring-boot>
@@ -98,7 +99,7 @@
             </dependency>
             <dependency>
                 <groupId>org.eblocker</groupId>
-                <artifactId>RestExpress</artifactId>
+                <artifactId>restexpress</artifactId>
                 <version>${version.restexpress}</version>
             </dependency>
             <dependency>
@@ -636,74 +637,6 @@
             </plugin>
         </plugins>
     </build>
-
-    <profiles>
-        <profile>
-            <id>jenkins</id>
-            <properties>
-                <debTargetDir>/home/apt/incoming</debTargetDir>
-            </properties>
-        </profile>
-        <profile>
-            <id>local</id>
-            <activation>
-                <property>
-                    <name>!skipLocal</name>
-                </property>
-            </activation>
-            <properties>
-                <debTargetDir>${project.build.directory}</debTargetDir>
-            </properties>
-        </profile>
-        <!-- BEGIN: Specific to mapping unit tests and covered code -->
-        <profile>
-            <id>coverage-per-test</id>
-            <activation>
-                <file>
-                    <exists>${basedir}/src/test/</exists>
-                </file>
-            </activation>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.jacoco</groupId>
-                        <artifactId>jacoco-maven-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <id>pre-unit-test</id>
-                                <!--<phase>test</phase>-->
-                                <goals>
-                                    <goal>prepare-agent</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-surefire-plugin</artifactId>
-                        <configuration>
-                            <properties>
-                                <property>
-                                    <name>listener</name>
-                                    <value>org.sonar.java.jacoco.JUnitListener</value>
-                                </property>
-                            </properties>
-                        </configuration>
-                    </plugin>
-
-                </plugins>
-            </build>
-            <dependencies>
-                <dependency>
-                    <groupId>org.sonarsource.java</groupId>
-                    <artifactId>sonar-jacoco-listeners</artifactId>
-                    <version>3.8</version>
-                    <scope>test</scope>
-                </dependency>
-            </dependencies>
-        </profile>
-
-    </profiles>
 
     <distributionManagement>
         <repository>
