@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.eblocker</groupId>
     <artifactId>eblocker-top</artifactId>
-    <version>2.4.14</version>
+    <version>2.4.15</version>
     <packaging>pom</packaging>
     <name>eBlocker - Common Project Definitions</name>
 
@@ -31,8 +31,6 @@
         <java.release>11</java.release>
 
         <version.netty>4.1.84.Final</version.netty>
-        <version.netty.icap>2.1.4</version.netty.icap>
-        <version.restexpress>0.12.2</version.restexpress>
         <version.syntaxe>0.4.9</version.syntaxe>
         <version.jedis>2.9.0</version.jedis>
         <version.guice>5.0.1</version.guice>
@@ -91,16 +89,6 @@
                 <groupId>io.netty</groupId>
                 <artifactId>netty-all</artifactId>
                 <version>${version.netty}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.eblocker</groupId>
-                <artifactId>netty-icap</artifactId>
-                <version>${version.netty.icap}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.eblocker</groupId>
-                <artifactId>restexpress</artifactId>
-                <version>${version.restexpress}</version>
             </dependency>
             <dependency>
                 <groupId>com.strategicgains</groupId>
