@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.eblocker</groupId>
     <artifactId>eblocker-top</artifactId>
-    <version>2.4.15</version>
+    <version>2.4.16</version>
     <packaging>pom</packaging>
     <name>eBlocker - Common Project Definitions</name>
 
@@ -59,7 +59,7 @@
         <version.junit>4.13.1</version.junit>
         <version.junit5>5.10.1</version.junit5>
         <version.junit.vintage>5.10.1</version.junit.vintage>
-        <version.mockito>3.3.3</version.mockito>
+        <version.mockito>5.10.0</version.mockito>
         <version.embedded-redis>0.6</version.embedded-redis>
         <version.subethasmtp>3.1.7</version.subethasmtp>
         <version.hikaricp>2.4.5</version.hikaricp>
@@ -423,6 +423,12 @@
             <dependency>
                 <groupId>org.mockito</groupId>
                 <artifactId>mockito-core</artifactId>
+                <version>${version.mockito}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-junit-jupiter</artifactId>
                 <version>${version.mockito}</version>
                 <scope>test</scope>
             </dependency>
