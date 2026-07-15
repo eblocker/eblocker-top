@@ -58,7 +58,7 @@
         <version.junit5>5.10.1</version.junit5>
         <version.junit.vintage>5.10.1</version.junit.vintage>
         <version.mockito>5.10.0</version.mockito>
-        <version.embedded-redis>0.9.0</version.embedded-redis>
+        <version.jedis-mock>1.1.15</version.jedis-mock>
 
         <version.jbrowserdriver>[0.14.0, 2.0)</version.jbrowserdriver>
         <version.lukehutch>1.9.18</version.lukehutch>
@@ -344,9 +344,9 @@
                 <scope>test</scope>
             </dependency>
             <dependency>
-                <groupId>org.signal</groupId>
-                <artifactId>embedded-redis</artifactId>
-                <version>${version.embedded-redis}</version>
+                <groupId>com.github.fppt</groupId>
+                <artifactId>jedis-mock</artifactId>
+                <version>${version.jedis-mock}</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
